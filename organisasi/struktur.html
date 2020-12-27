@@ -1,0 +1,88 @@
+<html>  
+    <head>
+        <style>
+            * {
+                padding: 1;
+                margin: 2;
+                box-sizing: border-box;
+            }
+    
+            body {
+                background: white;
+            }
+    
+            .organisasi {
+                background: white;
+                min-height: 100vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 1rem;
+            }
+    .box {
+                padding: 1rem 2rem;
+                margin-top: 2rem;
+                background: blue;
+                color: white;
+            }
+    
+            .sekben,
+            .anggota {
+                display: flex;
+                gap: 2rem;
+                flex-wrap: wrap;
+            }
+        </style>
+    </head>
+<body>
+
+   <!--  <?php 
+
+            include 'mysqlconnect.php';
+
+            $sql = "SELECT p.nama_pemuda, j.nama_jabatan, p.id_pemuda FROM jabatan j INNER JOIN pemuda p ON p.id_jabatan = j.id_jabatan";
+            $result = mysqli_query($mysqli, $sql);
+
+            while ($r=mysqli_fetch_array($result)) {
+
+        ?>
+ -->
+        <!-- html -->
+    <div class="organisasi">
+        <h2>Struktur Organisasi</h2>
+        <div class="box" style="text-align: center;">
+            <span><?php echo $r['nama_jabatan']; ?></span><br>
+            <b><?php echo $r['nama_pemuda']; ?></b>
+        </div>
+        <div class="box" style="text-align: center;">
+            <span><?php echo $r['nama_jabatan']; ?></span><br>
+            <b><?php echo $r['nama_pemuda']; ?></b>
+        </div>
+        <div class="sekben">
+            <div class="box" style="text-align: center;">
+                <span><?php echo $r['nama_jabatan']; ?></span><br>
+                <b><?php echo $r['nama_pemuda']; ?></b>
+            </div>
+            <div class="box" style="text-align: center;">
+                <span><?php echo $r['nama_jabatan']; ?></span><br>
+                <b><?php echo $r['nama_pemuda']; ?></b>
+            </div>
+        </div>
+        <div class="anggota">
+            <div class="box">
+            <span>Anggota 1</span>
+            </div>
+            <div class="box">
+                <span>Anggota 2</span>
+            </div>
+            <div class="box">
+                <span>Anggota 3</span>
+            </div>
+            <div class="box">
+                <span>Anggota 4</span>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
